@@ -1,0 +1,197 @@
+/* Login page uses the SAME theme as dashboard (style.css variables) */
+
+body.login-page {
+ margin: 0;
+ background: radial-gradient(1200px 600px at 10% 10%, #12234a 0%, transparent 60%),
+  radial-gradient(900px 500px at 90% 20%, #1b2b5a 0%, transparent 60%),
+  var(--bg);
+ color: var(--text);
+ font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+/* IMPORTANT: make shell relative so overlap works */
+.login-shell {
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 24px;
+ gap: 0;
+ /* gap must be 0 for overlap */
+ position: relative;
+}
+
+/* Side images panels (behind the card) */
+.login-bg {
+ flex: 0 0 38%;
+ height: 380px;
+ min-width: 280px;
+ border-radius: var(--radius);
+ background-size: cover;
+ background-position: center;
+ border: 1px solid var(--line);
+ box-shadow: var(--shadow);
+ position: relative;
+ z-index: 1;
+ /* behind card */
+ opacity: .95;
+}
+
+.login-bg-left {
+ background-image: url("../img/login-left.jpg");
+ margin-right: -110px;
+}
+
+.login-bg-right {
+ background-image: url("../img/login-right.jpg");
+ margin-left: -110px;
+}
+
+/* Main login card (above images) */
+.login-card2 {
+ flex: 0 0 440px;
+ background: rgba(15, 23, 42, .78);
+ border-radius: var(--radius);
+ box-shadow: var(--shadow);
+ border: 1px solid var(--line);
+ position: relative;
+ z-index: 5;
+ /* above images */
+}
+
+.login-card2-inner {
+ padding: 18px;
+ background: transparent;
+}
+
+.login-brand2 {
+ text-align: center;
+ margin-bottom: 14px;
+}
+
+.login-logo2 {
+ width: 64px;
+ height: 64px;
+ object-fit: contain;
+ margin-bottom: 6px;
+}
+
+.login-title2 {
+ font-weight: 900;
+ font-size: 22px;
+ letter-spacing: .5px;
+ color: #dbeafe;
+ line-height: 1.1;
+}
+
+.login-subtitle2 {
+ font-weight: 700;
+ font-size: 12px;
+ letter-spacing: 2px;
+ color: var(--muted);
+ margin-top: 2px;
+}
+
+.login-alert {
+ background: rgba(239, 68, 68, .14);
+ color: #fecaca;
+ border: 1px solid rgba(239, 68, 68, .25);
+ padding: 10px 12px;
+ border-radius: 12px;
+ margin: 10px 0 12px 0;
+ font-size: 13px;
+}
+
+/* Center form inside card */
+.login-form2 {
+ width: 320px;
+ margin: 0 auto;
+ background: transparent;
+ border: none;
+ box-shadow: none;
+ padding: 0;
+}
+
+.login-row2 {
+ margin: 10px 0 12px 0;
+}
+
+.login-label2 {
+ display: block;
+ font-size: 13px;
+ font-weight: 700;
+ color: #cbd5e1;
+ margin-bottom: 6px;
+}
+
+.login-input2 {
+ width: 100%;
+ padding: 11px 12px;
+ border-radius: 12px;
+ border: 1px solid rgba(148, 163, 184, .18);
+ background: rgba(2, 6, 23, .35);
+ color: #fff;
+ outline: none;
+}
+
+.login-input2:focus {
+ border-color: rgba(59, 130, 246, .55);
+ box-shadow: 0 0 0 4px rgba(59, 130, 246, .12);
+}
+
+.login-btn2 {
+ width: 100%;
+ padding: 10px 12px;
+ border-radius: 12px;
+ border: 1px solid rgba(59, 130, 246, .35);
+ background: rgba(59, 130, 246, .18);
+ color: #fff;
+ font-weight: 900;
+ cursor: pointer;
+}
+
+.login-btn2:hover {
+ background: rgba(59, 130, 246, .24);
+}
+
+/* Responsive: hide side images on small screens */
+@media (max-width: 980px) {
+ .login-bg {
+  display: none;
+ }
+
+ .login-card2 {
+  flex-basis: 100%;
+  max-width: 440px;
+ }
+}
+
+/* 1) Dark overlay on side images for better focus */
+.login-bg::after {
+ content: "";
+ position: absolute;
+ inset: 0;
+ border-radius: var(--radius);
+ background: rgba(2, 6, 23, .45);
+}
+
+/* 2) Make the center card more readable (glass effect) */
+.login-card2 {
+ background: rgba(15, 23, 42, .85) !important;
+ backdrop-filter: blur(10px);
+}
+
+/* 3) Stronger button (more “primary”) */
+.login-btn2 {
+ background: rgba(59, 130, 246, .35) !important;
+ border-color: rgba(59, 130, 246, .55) !important;
+}
+
+.login-btn2:hover {
+ background: rgba(59, 130, 246, .45) !important;
+}
+
+/* 4) Slightly brighter inputs */
+.login-input2 {
+ background: rgba(2, 6, 23, .50) !important;
+}
