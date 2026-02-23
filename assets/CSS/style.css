@@ -1,0 +1,1274 @@
+
+.search-form {
+ margin-bottom: 20px;
+}
+ .search-form input,
+ .search-form select,
+ .search-form button {
+  padding: 8px;
+  margin-right: 5px;
+ }
+
+ .success {
+  color: green;
+  margin-top: 10px;
+ }
+
+ .success {
+  color: green;
+  margin: 10px 0;
+ }
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+ }
+
+ body {
+  background: #f4f6f9;
+  color: #333;
+ }
+
+ /* Layout */
+ .wrapper {
+  display: flex;
+  min-height: 100vh;
+ }
+
+ .sidebar {
+  width: 240px;
+  background: #1e293b;
+  color: #fff;
+  padding: 20px;
+ }
+
+ .sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+ }
+
+ .sidebar a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+ }
+
+ .sidebar a:hover {
+  background: #334155;
+  color: #fff;
+ }
+
+ .main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .header {
+  background: #fff;
+  padding: 15px 25px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .header span {
+  font-weight: 600;
+ }
+
+ .content {
+  padding: 25px;
+ }
+
+ /* Cards */
+ .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+ }
+
+ .card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+ }
+
+ /* Tables */
+ table {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: collapse;
+ }
+
+ table th,
+ table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+ }
+
+ table th {
+  background: #f1f5f9;
+ }
+
+ /* Forms */
+ form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 500px;
+ }
+
+ form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+ }
+
+ form input,
+ form select,
+ form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+ }
+
+ form button {
+  margin-top: 20px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+ }
+
+ form button:hover {
+  background: #1d4ed8;
+ }
+
+ /* Alerts */
+ .success {
+  background: #dcfce7;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  color: #166534;
+ }
+
+ body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+ }
+
+ .container {
+  width: 90%;
+  margin: auto;
+ }
+
+ h2 {
+  color: #333;
+ }
+
+ a {
+  text-decoration: none;
+  color: #007bff;
+ }
+
+ a:hover {
+  text-decoration: underline;
+ }
+
+ /* Buttons */
+ button {
+  padding: 8px 15px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+ }
+
+ button:hover {
+  background: #0056b3;
+ }
+
+ /* Forms */
+ input,
+ select {
+  padding: 7px;
+  width: 100%;
+  margin-top: 5px;
+ }
+
+ form {
+  background: #fff;
+  padding: 15px;
+  width: 300px;
+  border-radius: 5px;
+ }
+
+ /* Tables */
+ table {
+  width: 100%;
+  background: #fff;
+  border-collapse: collapse;
+  margin-top: 15px;
+ }
+
+ table th {
+  background: #343a40;
+  color: #fff;
+ }
+
+ table th,
+ table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+ }
+
+ /* Messages */
+ .success {
+  color: green;
+ }
+
+ .error {
+  color: red;
+ }
+
+ :root {
+  --bg: #0b1220;
+  --panel: #0f172a;
+  --card: #0b1220;
+  --muted: #94a3b8;
+  --text: #e5e7eb;
+  --line: #1f2a44;
+  --primary: #3b82f6;
+  --primary2: #2563eb;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .25);
+  --radius: 14px;
+ }
+
+ * {
+  box-sizing: border-box
+ }
+
+ html,
+ body {
+  height: 100%
+ }
+
+ body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, #12234a 0%, transparent 60%),
+   radial-gradient(900px 500px at 90% 20%, #1b2b5a 0%, transparent 60%),
+   var(--bg);
+  color: var(--text);
+ }
+
+ a {
+  color: inherit;
+  text-decoration: none
+ }
+
+ .container {
+  display: flex;
+  min-height: 100vh
+ }
+
+ /* Sidebar */
+ .sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #0f172a 0%, #0b1220 100%);
+  border-right: 1px solid var(--line);
+  padding: 18px 14px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+ }
+
+ .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(59, 130, 246, .10);
+  border: 1px solid rgba(59, 130, 246, .18);
+  margin-bottom: 14px;
+ }
+
+ .brand .logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(59, 130, 246, .18);
+  border: 1px solid rgba(59, 130, 246, .25);
+  font-weight: 800;
+ }
+
+ .brand .title {
+  font-weight: 800
+ }
+
+ .brand .sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px
+ }
+
+ .nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: #cbd5e1;
+  margin: 6px 0;
+  border: 1px solid transparent;
+  transition: .2s;
+ }
+
+ .nav a:hover {
+  background: rgba(148, 163, 184, .10);
+  border-color: rgba(148, 163, 184, .12)
+ }
+
+ .nav a.active {
+  background: rgba(59, 130, 246, .15);
+  border-color: rgba(59, 130, 246, .22);
+  color: #fff
+ }
+
+ /* Main */
+ .main {
+  flex: 1;
+  padding: 18px
+ }
+
+ .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  background: rgba(15, 23, 42, .7);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+ }
+
+ .header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+ }
+
+ .pill {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, .10);
+  border: 1px solid rgba(148, 163, 184, .15);
+  color: #dbeafe;
+ }
+
+ .header .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+ }
+
+ .content {
+  margin-top: 16px;
+ }
+
+ /* Cards */
+ .grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+ }
+
+ .card {
+  grid-column: span 4;
+  background: rgba(15, 23, 42, .65);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+ }
+
+ .card h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: var(--muted)
+ }
+
+ .card .num {
+  font-size: 28px;
+  font-weight: 900
+ }
+
+ /* Tables */
+ .table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(15, 23, 42, .65);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+ }
+
+ .table th,
+ .table td {
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(31, 42, 68, .7);
+  text-align: left;
+ }
+
+ .table th {
+  color: #dbeafe;
+  background: rgba(2, 6, 23, .35);
+  font-weight: 800
+ }
+
+ .table tr:hover td {
+  background: rgba(148, 163, 184, .06)
+ }
+
+ .table .actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap
+ }
+
+ /* Forms */
+ .form {
+  max-width: 520px;
+  background: rgba(15, 23, 42, .65);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+ }
+
+ .form .row {
+  margin-bottom: 12px
+ }
+
+ .label {
+  display: block;
+  margin-bottom: 6px;
+  color: #cbd5e1;
+  font-weight: 700;
+  font-size: 13px
+ }
+
+ .input,
+ select {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, .18);
+  background: rgba(2, 6, 23, .35);
+  color: #fff;
+  outline: none;
+ }
+
+ .input:focus,
+ select:focus {
+  border-color: rgba(59, 130, 246, .55);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, .12)
+ }
+
+ /* Buttons */
+ .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, .18);
+  background: rgba(148, 163, 184, .10);
+  color: #fff;
+  cursor: pointer;
+  transition: .2s;
+  font-weight: 800;
+ }
+
+ .btn:hover {
+  transform: translateY(-1px);
+  background: rgba(148, 163, 184, .14)
+ }
+
+ .btn.primary {
+  background: rgba(59, 130, 246, .18);
+  border-color: rgba(59, 130, 246, .35)
+ }
+
+ .btn.primary:hover {
+  background: rgba(59, 130, 246, .24)
+ }
+
+ .btn.danger {
+  background: rgba(239, 68, 68, .16);
+  border-color: rgba(239, 68, 68, .35)
+ }
+
+ .btn.success {
+  background: rgba(34, 197, 94, .16);
+  border-color: rgba(34, 197, 94, .35)
+ }
+
+ .badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid rgba(148, 163, 184, .18);
+  background: rgba(148, 163, 184, .08);
+ }
+
+ .badge.available {
+  border-color: rgba(34, 197, 94, .35);
+  background: rgba(34, 197, 94, .12)
+ }
+
+ .badge.borrowed {
+  border-color: rgba(245, 158, 11, .35);
+  background: rgba(245, 158, 11, .12)
+ }
+
+ .badge.returned {
+  border-color: rgba(59, 130, 246, .35);
+  background: rgba(59, 130, 246, .12)
+ }
+
+ /* Alerts */
+ .alert {
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, .18);
+  background: rgba(148, 163, 184, .08);
+  margin-bottom: 12px;
+ }
+
+ .alert.success {
+  border-color: rgba(34, 197, 94, .35);
+  background: rgba(34, 197, 94, .12)
+ }
+
+ .alert.danger {
+  border-color: rgba(239, 68, 68, .35);
+  background: rgba(239, 68, 68, .12)
+ }
+
+ .alert.warning {
+  border-color: rgba(245, 158, 11, .35);
+  background: rgba(245, 158, 11, .12)
+ }
+
+ .small {
+  color: var(--muted);
+  font-size: 12px
+ }
+
+ /* Login special */
+ .login-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+ }
+
+ .login-card {
+  width: min(420px, 100%);
+  background: rgba(15, 23, 42, .75);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+ }
+
+ .login-card h2 {
+  margin: 0 0 6px 0
+ }
+
+ .login-card p {
+  margin: 0 0 14px 0;
+  color: var(--muted)
+ }
+
+ /* Responsive */
+ @media (max-width: 980px) {
+  .sidebar {
+   display: none
+  }
+
+  .card {
+   grid-column: span 12
+  }
+ }
+
+ /* Force sidebar to stick to the very left edge */
+ html,
+ body {
+  margin: 0 !important;
+  padding: 0 !important;
+ }
+
+ .wrapper,
+ .container {
+  margin: 0 !important;
+  padding: 0 !important;
+ }
+
+ /* Sidebar edge fix */
+ .sidebar {
+  margin-left: 0 !important;
+  left: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+ }
+
+ /* Center main area content so the right side doesn't feel empty */
+ .main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* <-- this centers header + content block */
+  padding: 18px 22px;
+ }
+
+ /* Limit width and center */
+ .header,
+ .content {
+  width: min(1400px, 100%);
+ }
+
+ /* Optional: make cards row centered and more balanced */
+ .grid {
+  justify-content: center;
+ }
+
+ .footer {
+  margin-top: 18px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  /* أقل من قبل */
+  background: rgba(15, 23, 42, .55);
+  border: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  font-size: 12px;
+ }
+
+ /* Main column layout */
+ .main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 22px;
+ }
+
+ /* Center ONLY the main content block, not the footer */
+ .header,
+ .content,
+ .footer {
+  width: min(1100px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ /* Push footer to the bottom when page is short */
+ .content {
+  flex: 1;
+ }
+
+ /* Make page titles like Dashboard readable */
+ .content h2,
+ .content h1 {
+  color: #e5e7eb !important;
+  /* نفس لون النص الأساسي */
+ }
+
+ /* Optional: if you use icon next to title */
+ .content h2 span,
+ .content h2 i {
+  color: #e5e7eb !important;
+ }
+
+ .books-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 16px;
+  align-items: start;
+ }
+
+ @media (max-width: 1100px) {
+  .books-layout {
+   grid-template-columns: 1fr;
+  }
+ }
+
+ .panel {
+  background: rgba(15, 23, 42, .65);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+ }
+
+ .panel-title {
+  margin: 0 0 12px 0;
+  color: #dbeafe;
+  font-weight: 800;
+ }
+
+ .panel-wide {
+  min-width: 0;
+ }
+
+ .table-wrap {
+  overflow: auto;
+ }
+
+ .dark-form {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+ }
+
+ .w-100 {
+  width: 100%;
+ }
+
+ /* Make native selects match dark theme */
+ select,
+ .input {
+  background: rgba(2, 6, 23, .45) !important;
+  color: #fff !important;
+  border: 1px solid rgba(148, 163, 184, .18) !important;
+ }
+
+ /* Dropdown list (options) */
+ select option {
+  background: #0b1220;
+  /* dark background */
+  color: #e5e7eb;
+ }
+
+ /* Hover/selected look (Chrome/Edge) */
+ select option:checked {
+  background: rgba(59, 130, 246, .35);
+  color: #fff;
+ }
+
+ /* Better focus */
+ select:focus {
+  border-color: rgba(59, 130, 246, .55) !important;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, .12) !important;
+ }
+
+ select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image:
+   linear-gradient(45deg, transparent 50%, #cbd5e1 50%),
+   linear-gradient(135deg, #cbd5e1 50%, transparent 50%);
+  background-position:
+   calc(100% - 18px) calc(1em + 2px),
+   calc(100% - 13px) calc(1em + 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 36px;
+ }
+
+ /* Center the Add New Book block inside the left panel */
+ .books-layout .panel:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* vertical center */
+ }
+
+ /* Keep the title aligned and nice */
+ .books-layout .panel:first-child .panel-title {
+  text-align: center;
+ }
+
+ /* Make the form itself centered and not too wide */
+ .books-layout .panel:first-child form {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  /* horizontal center */
+ }
+
+ /* Center the button */
+ .books-layout .panel:first-child .btn {
+  width: 100%;
+ }
+
+ /* Center Books List content inside the right panel */
+ .books-layout .panel-wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* vertical center for the whole block */
+ }
+
+ /* Center the title */
+ .books-layout .panel-wide .panel-title {
+  text-align: center;
+ }
+
+ /* Make the table area centered and keep scrolling inside it */
+ .books-layout .panel-wide .table-wrap {
+  width: 100%;
+  max-width: 720px;
+  /* عدّلها إذا بدك أعرض */
+  margin: 0 auto;
+  /* horizontal center */
+  flex: 1;
+  /* keep scroll area */
+ }
+
+ /* 1) Make both cards the same width */
+ .books-layout {
+  grid-template-columns: 440px 440px;
+  /* نفس عرض الكرتين */
+  justify-content: center;
+  /* يوسّطهم */
+ }
+
+ /* Responsive fallback */
+ @media (max-width: 1000px) {
+  .books-layout {
+   grid-template-columns: 1fr;
+  }
+ }
+
+ /* 2) Make table compact (smaller row height + font) */
+ .table {
+  font-size: 12px;
+  /* أصغر */
+ }
+
+ .table th,
+ .table td {
+  padding: 8px 10px;
+  /* أقل padding */
+  line-height: 1.2;
+  white-space: nowrap;
+  /* ما ينزل سطرين */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* ... */
+  max-width: 140px;
+  /* حتى ما يكبر */
+ }
+
+ /* 3) Smaller action buttons inside table */
+ .table .actions {
+  gap: 6px;
+ }
+
+ .table .btn {
+  padding: 6px 8px;
+  font-size: 11px;
+  border-radius: 10px;
+ }
+
+ /* 4) Limit the height of the Books List and make inner scroll */
+ .panel-wide {
+  height: 520px;
+  /* نفس ارتفاع Add Book */
+  display: flex;
+  flex-direction: column;
+ }
+
+ .panel-wide .table-wrap {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+ }
+
+ /* Center single-form pages like Add Book / Edit Book */
+ .center-page {
+  min-height: calc(100vh - 220px);
+  /* يراعي الهيدر/الفوتر */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .center-card {
+  width: min(680px, 100%);
+
+ }
+
+ /* Center content inside the big panel on Add/Edit pages */
+ .center-card .panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* <-- centers title + form */
+ }
+
+ /* Make the form itself centered and with a nice width */
+ .center-card .panel form {
+  width: min(420px, 100%);
+  margin: 0 auto;
+ }
+
+ /* Center the "New Book" title */
+ .center-card .panel .panel-title {
+  width: 100%;
+  text-align: center;
+ }
+
+ /* Optional: center the main page title "+ Add Book" */
+ .center-card>h2 {
+  text-align: center;
+ }
+
+ /* Search page form width */
+ .search-form {
+  width: min(420px, 100%);
+  margin: 0 auto;
+ }
+
+ /* Center page title (icon + text) */
+ .content>h2 {
+  text-align: center !important;
+  width: 100%;
+ }
+
+ /* If the icon is inline before the text, this keeps it centered nicely */
+ .content>h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+ }
+
+ .page-title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+ }
+
+ .loans-form {
+  width: min(420px, 100%);
+  margin: 0 auto;
+ }
+
+ .table td[colspan] {
+  text-align: center;
+  color: var(--muted);
+  padding: 18px 12px;
+ }
+
+ /* Keep tables inside their panels */
+ .panel {
+  overflow: hidden;
+  /* يمنع أي عنصر يطلع برا البوكس */
+ }
+
+ /* Table container should handle scrolling */
+ .table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  /* scroll أفقي داخل البوكس */
+  overflow-y: auto;
+  /* scroll عمودي إذا حددت max-height */
+ }
+
+ /* Make table behave nicely */
+ .table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  /* يمنع تمدد أعمدة بشكل مبالغ */
+ }
+
+ /* Modal (Confirm Delete) */
+ .modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .55);
+  z-index: 9999;
+ }
+
+ .modal-box {
+  width: min(420px, 92vw);
+  background: rgba(15, 23, 42, .92);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+ }
+
+ .modal-title {
+  margin: 0 0 8px 0;
+  color: #dbeafe;
+  font-weight: 900;
+ }
+
+ .modal-text {
+  margin: 0 0 14px 0;
+  color: var(--muted);
+  line-height: 1.4;
+ }
+
+ .modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+ }
+
+ /* Register page centering + title color */
+ .login-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+ }
+
+ .login-card {
+  width: min(520px, 95vw);
+  margin: 0 auto;
+  background: rgba(15, 23, 42, .75);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+ }
+
+ /* Make Register title white */
+ .login-card h2 {
+  color: #ffffff !important;
+ }
+
+ /* Optional: slightly brighter subtitle */
+ .login-card p {
+  color: var(--muted) !important;
+ }
+
+ /* Force perfect centering for Register/Login pages */
+
+
+ .login-wrap {
+  min-height: 100vh !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px !important;
+ }
+
+ /* Center card itself */
+ .login-card {
+  width: min(520px, 95vw) !important;
+  margin: 0 auto !important;
+ }
+
+ /* IMPORTANT: remove the default form max-width that pushes layout */
+ .login-card .form {
+  max-width: 100% !important;
+  margin: 0 auto !important;
+ }
+
+ .login-card .btn {
+  width: 100%;
+ }
+
+ .login-card .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+
+ /* Center Register title + subtitle */
+ .login-card h2,
+ .login-card p {
+  text-align: center !important;
+  width: 100%;
+ }
+
+ /* optional: make subtitle a bit lighter */
+ .login-card p {
+  color: var(--muted) !important;
+ }
+
+ /* Make "Create new account" look like the Login button */
+ .login-card2 .btn,
+ .login-card2 a.btn {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 10px 12px !important;
+  border-radius: 12px !important;
+  font-weight: 900 !important;
+ }
+
+ /* If you want it exactly same blue style as Login */
+ .login-card2 a.btn {
+  border: 1px solid rgba(59, 130, 246, .35) !important;
+  background: rgba(59, 130, 246, .18) !important;
+  color: #fff !important;
+ }
+
+ .login-card2 a.btn:hover {
+  background: rgba(59, 130, 246, .24) !important;
+ }
+
+ /* Make both buttons same size */
+ .login-card2 .login-btn2,
+ .login-card2 a.create-account-btn {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 10px 12px !important;
+  border-radius: 12px !important;
+  font-weight: 900 !important;
+  text-decoration: none !important;
+ }
+
+ /* Secondary style for Create new account */
+ .login-card2 a.create-account-btn {
+  background: rgba(148, 163, 184, .10) !important;
+  border: 1px solid rgba(148, 163, 184, .18) !important;
+  color: #e5e7eb !important;
+ }
+
+ .login-card2 a.create-account-btn:hover {
+  background: rgba(148, 163, 184, .14) !important;
+  transform: translateY(-1px);
+ }
+
+ /* Fix forms inside tables (remove white box) */
+ .table td form {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+  display: inline-block !important;
+ }
+
+ /* Make Action column centered */
+ .table td.actions,
+ .table th:last-child {
+  text-align: center;
+  vertical-align: middle;
+ }
+
+ /* Make delete button compact inside table */
+ .table td.actions .btn {
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 10px;
+ }
+
+ .table-form {
+  margin: 0;
+ }
+
+ .table-form {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+ }
+
+ .table td form {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+ }
+
+ .table td.actions {
+  text-align: center;
+  vertical-align: middle;
+ }
+
+ .modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .55);
+  z-index: 9999;
+ }
+
+ .modal-box {
+  width: min(420px, 92vw);
+  background: rgba(15, 23, 42, .92);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+ }
+
+ .modal-title {
+  margin: 0 0 8px 0;
+  color: #dbeafe;
+  font-weight: 900;
+ }
+
+ .modal-text {
+  margin: 0 0 14px 0;
+  color: var(--muted);
+  line-height: 1.4;
+ }
+
+ .modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+ }
